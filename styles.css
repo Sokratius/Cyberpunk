@@ -208,12 +208,30 @@ body {
 
 }
 
+/*Убрать полосу прокрутки для всей страницы*/
+::-webkit-scrollbar {
+  width: 0;
+}
+
 a,
 button,
 input,
 textarea,
 svg * {
     transition-duration: var(--transition-duration);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
 }
 
 .header {
@@ -228,6 +246,23 @@ svg * {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  animation: animate 12s infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate {
+  0% {
+    background-image: url(./images/header-background.jpg);
+  }
+  33% {
+    background-image: url(./images/Slide_1.jpg);
+  }
+  66% {
+    background-image: url(./images/Slide_2.jpg);
+  }
+  100% {
+    background-image: url(./images/header-background.jpg);
+  }
 }
 
 .header-top-bar {
@@ -252,9 +287,13 @@ svg * {
   column-gap: 40px;
 }
 
-.header-menu-item {
-  flex-shrink: 0;
+.header-menu-link {
+  display: inline-flex;
+  height: 60px;
+  align-items: center;
 }
+
+
 
 
 .container {
@@ -263,9 +302,12 @@ svg * {
   max-width: 1280px;
   width: 100%;
   margin-inline: auto;
+  overflow: hidden;
 }
 
 .accessibility {
+  scale: 0.8; 
+  margin-bottom: -39px; 
   display: flex;
   width: 624px;
   height: 369px;
@@ -297,7 +339,88 @@ svg * {
   align-self: start;
 }
 
-@media (max-width: 1023px) {
+.night-city {
+  display: flex;
+  padding-inline: 36px;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+
+.city-changes {
+  font-family: var(--font-family-accent);
+  font-size: 52px;
+  line-height: normal;
+  
+}
+
+.cyberpunk2077 {
+  color: #777777;
+  font-size: 18px;
+  line-height: 1.89;
+  margin-top: 18px;
+  text-align: left;
+  max-width: 952px;
+  margin-bottom: 70px;
+}
+
+.term {
+  font-weight: bold;
+  color: #52BEDC;
+}
+
+.images-block {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  column-gap: 32px;
+  
+}
+
+.images-block-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section-divider {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+@media (max-width: 1028px) {
+  .accessibility {
+    scale: 0.6;
+    margin-bottom: -75px;
+  }
+
+  .images-block {
+    row-gap: 26px;
+    width: 100%;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  .first-block-images {
+    width: 47.5%;
+    height: 100%;
+  }
+
+  .big-image {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .images-block-left {
+    flex-direction: row;
+    column-gap: 26px;
+    width: 100%;
+    justify-content: space-between;
+  } 
+
   
 }
 
@@ -333,6 +456,7 @@ svg * {
     padding-inline: 13px;
     margin: 0;
     text-align: center;
+    scale: 1;
   }
 
   .accessibility-text {
@@ -347,10 +471,40 @@ svg * {
     margin-inline: auto;
 
   }  
+
+
+  .night-city {
+    padding-inline: 0;
+  }
+
+  .information-block {
+    margin-inline: 10px;
+  }
+
+  .city-changes {
+    font-size: 30px;
+  }
+
+  .cyberpunk2077 {
+    font-size: 16px;
+    line-height: 2;
+  }
+
+  .images-block {
+    flex-direction: column;
+    row-gap: 32px;
+  }
+
+  .first-block-images {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .images-block-left {
+   
+    row-gap: 32px;
+    flex-direction: column;
+  }
 }
 
-/* @media (max-width: 480px) {
-  .accessibility {
-    width: 100vw;
-  }
-} */
