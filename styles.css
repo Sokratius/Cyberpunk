@@ -208,6 +208,15 @@ body {
 
 }
 
+body::after {
+  content:
+      url('./images/Slide_1.jpg')
+      url('./images/Slide_2.jpg')
+      url('./images/header-background.jpg')
+  ;
+  display: none;
+}
+
 /*Убрать полосу прокрутки для всей страницы*/
 ::-webkit-scrollbar {
   width: 0;
@@ -247,7 +256,7 @@ svg * {
   background-position: center;
   background-repeat: no-repeat;
   animation: animate 12s infinite;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 
 @keyframes animate {
