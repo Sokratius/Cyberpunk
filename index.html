@@ -78,7 +78,27 @@
       </div>
     </section>
     <section class="play-and-win">
-      <img src="./images/third_section_head.png" alt="" class="section-divider">
+      <div class="play-and-win-content">
+        <div class="play-and-win-text">
+          <h2 class="play-and-win-title">Играй и выигрывай!</h2>
+          <p class="play-and-win-description">Играй в <span class="term">Cyberpunk 2077</span> и получи возможность выиграть консоль <span class="term">Xbox Series X</span> или <span class="term">Sony PlayStation 5!</span>  Заполни форму ниже и приложи скриншот о покупке игры. Итоги розыгрыша будут подведены 1 февраля. Удачи! ;)</p>
+        </div>
+        <form action="/" method="post" class="play-and-win-form">
+          <label for="name"><input required ="text" class="name play-and-win-input" id="name" placeholder="Как тебя зовут?"></label>
+          <label for="email"><input required type="email" class="email play-and-win-input" id="email" placeholder="Твой email"></label>
+          <label for="file-addition" class="custom-file-upload">Прикрепить скриншот<br /><span class="screenshot-formats">.png / .jpg / .pdf</span><input type="file" class="file" id="file-addition" required></label>
+          <button class="submit-button" type="submit">Отправить</button>
+          <label for="policy-agree" class="checkbox"><input type="checkbox" class="visually-hidden checkbox-control" id="policy-agree" required>
+            <span class="checkbox-emulator"></span>
+            <span class="checkbox-label-emulator">Согласен на обработку персональных данных</span>
+          </label>
+        </form>
+        <div class="ps-xbox">
+          <img src="./images/xbox.png" class="xbox-image play-and-win-image" alt="xbox" width="211" height="250" loading="lazy">
+          <img src="./images/playstation.png" class="playstation-image play-and-win-image" alt="playstation 5" width="211" height="250" loading="lazy">
+
+        </div>
+      </div>
     </section>
   </main>
 </body>
