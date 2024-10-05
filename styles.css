@@ -22,6 +22,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Roboto';
+  src: url(./fonts/Roboto-Light.woff2) format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 /**
   Нормализация блочной модели
@@ -302,7 +310,9 @@ svg * {
   align-items: center;
 }
 
-
+.header-menu-link:hover {
+  scale: 1.1;
+}
 
 
 .container {
@@ -350,6 +360,7 @@ svg * {
 
 .night-city {
   display: flex;
+  min-height: 100vh;
   padding-inline: 36px;
   flex-direction: column;
   align-items: center;
@@ -399,6 +410,165 @@ svg * {
   object-fit: cover;
 }
 
+.play-and-win {
+  background-color: var(--color-dark);
+  padding-top: var(--main-padding-block);
+  padding-inline: 36px;
+  padding-bottom: 70px;
+  min-height: 100vh;
+  
+}
+
+.play-and-win-content {
+  max-width: 952px;
+  display: flex;
+  margin-inline: auto;
+  flex-wrap: wrap;
+  column-gap: 120px;
+}
+
+.play-and-win-text {
+  max-height: 30px;
+  margin-bottom: 250px;
+  
+}
+.play-and-win-title {
+  font-size: 52px;
+  color: var(--color-light);
+  font-family: var(--font-family-accent);
+  font-weight: 400;
+}
+
+.play-and-win-description {
+  color: var(--color-light);
+  font-size: 18px;
+  line-height: 1.89;
+  margin-top: 39px;
+
+}
+
+.play-and-win-form {
+  width: 360px;
+  margin-bottom: 50px;
+}
+
+.play-and-win-input {
+  display: block;
+  width: 100%;
+  background-color: var(--color-dark);
+  border: none;
+  border-bottom: 1px solid var(--color-gray);
+  color: var(--color-light);
+  font-size: 18px;
+  outline: none;
+  font-weight: 300;
+  padding-bottom: 13px;
+  margin-bottom: 35px;
+}
+
+.play-and-win-input::placeholder {
+  font-size: 18px;
+  color: var(--color-light);
+  font-weight: 300;
+  line-height: normal;
+}
+
+.file {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+  width: 100%;
+  cursor: pointer;
+  background-color: var(--color-dark);
+  color: white;
+  font-size: 18px;
+  text-decoration: underline;
+  text-align: center;
+  border: 1px dashed var(--color-gray);
+  height: 120px;
+}
+
+.screenshot-formats {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.submit-button {
+  display: block;
+  color: var(--color-dark);
+  font-size: 18px;
+  font-weight: 700;
+  padding-inline: 50px;
+  padding-block: 15px;
+  background-color: var(--color-yellow);
+  margin-top: 35px;
+  margin-bottom: 15px;
+  border: none;
+}
+
+.submit-button:hover {
+  box-shadow: 0px 0px 3px var(--color-dark) inset;
+}
+
+.submit-button:active {
+  scale: 0.99;
+}
+
+.checkbox {
+  display: flex;
+  column-gap: 0.5em;
+  user-select: none;
+  height: 14px;
+  
+}
+
+.checkbox-control:not(:checked) + .checkbox-emulator::after {
+  display: none;
+}
+
+.checkbox-emulator {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--color-light);
+  background-color: var(--color-dark);
+  
+}
+
+.checkbox-emulator::after {
+  content: "𐄂";
+  position: absolute;
+  top: -6px;
+  left: 2.5px;
+  color: var(--color-yellow);
+}
+
+.checkbox-label-emulator {
+  color: var(--color-light);
+  font-size: 14px;
+  font-weight: 300;
+
+}
+
+.ps-xbox {
+  display: inline-flex;
+  column-gap: 32px;   
+}
+
+.xbox-image, .playstation-image {
+  position: relative;
+  z-index: 200;
+}
 
 @media (max-width: 1028px) {
   .accessibility {
@@ -430,8 +600,30 @@ svg * {
     justify-content: space-between;
   } 
 
+  .play-and-win {
+    justify-content: center;
+    
+  }
+
+  .screenshot-formats {
+    display: none;
+  }
+
+  .play-and-win-text {
+    max-height: 100%;
+  }
+
+  .ps-xbox {
+    display: none;
+  }
+
+  .play-and-win-form {
+    width: 100%;
+    margin-top: -150px;
+  }
   
 }
+
 
 @media (max-width: 767px) {
   .header {
@@ -469,7 +661,6 @@ svg * {
   }
 
   .accessibility-text {
-    
     font-size: 30px;
   }
 
@@ -480,7 +671,6 @@ svg * {
     margin-inline: auto;
 
   }  
-
 
   .night-city {
     padding-inline: 0;
@@ -514,6 +704,14 @@ svg * {
    
     row-gap: 32px;
     flex-direction: column;
+  }
+
+  .play-and-win-title {
+    font-size: 30px;
+  }
+
+  .play-and-win-text, .term, input::placeholder {
+    font-size: 16px !important;
   }
 }
 
