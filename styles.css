@@ -221,6 +221,9 @@ body::after {
       url('./images/Slide_1.jpg')
       url('./images/Slide_2.jpg')
       url('./images/header-background.jpg')
+      url('./images/Slide_1_1024.png')
+      url('./images/Slide_2_1024.jpg')
+      url('./images/slide_3_1024.png')
   ;
   display: none;
 }
@@ -622,6 +625,21 @@ svg * {
     margin-top: -150px;
   }
   
+
+  @keyframes animate {
+    0% {
+      background-image: url(./images/Slide_3_1024.png);
+    }
+    33% {
+      background-image: url(./images/Slide_1_1024.jpg);
+    }
+    66% {
+      background-image: url(./images/slide_2_1024.png);
+    }
+    100% {
+      background-image: url(./images/Slide_3_1024.png);
+    }
+  }
 }
 
 
