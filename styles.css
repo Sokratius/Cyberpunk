@@ -565,11 +565,11 @@ svg * {
 }
 
 .checkbox-emulator::after {
-  content: "𐄂";
+  content: "";
   position: absolute;
-  top: -10px;
-  left: 2.5px;
-  color: var(--color-yellow);
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-yellow);
 }
 
 .checkbox-label-emulator {
