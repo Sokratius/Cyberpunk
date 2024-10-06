@@ -211,7 +211,7 @@ svg * {
 body {
   font-family: var(--font-family-base);
   font-size: 18px;
-  line-height: 1.34;
+  line-height: 1.89;
   width: 100%;
 
 }
@@ -371,7 +371,7 @@ svg * {
 
 .city-changes {
   font-family: var(--font-family-accent);
-  font-size: 52px;
+  font-size: 50px;
   line-height: normal;
   
 }
@@ -414,7 +414,7 @@ svg * {
   background-color: var(--color-dark);
   padding-top: var(--main-padding-block);
   padding-inline: 36px;
-  padding-bottom: 70px;
+  
   min-height: 100vh;
   
 }
@@ -433,7 +433,8 @@ svg * {
   
 }
 .play-and-win-title {
-  font-size: 52px;
+  font-size: 50px;
+  line-height: normal;
   color: var(--color-light);
   font-family: var(--font-family-accent);
   font-weight: 400;
@@ -468,6 +469,23 @@ svg * {
 
 .play-and-win-input::placeholder {
   font-size: 18px;
+  font-family: var(--font-family-base);
+  color: var(--color-light);
+  font-weight: 300;
+  line-height: normal;
+}
+
+.play-and-win::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 18px;
+  font-family: var(--font-family-base);
+  color: var(--color-light);
+  font-weight: 300;
+  line-height: normal;
+}
+
+.play-and-win::-moz-placeholder { /* Firefox 19+ */
+  font-size: 18px;
+  font-family: var(--font-family-base);
   color: var(--color-light);
   font-weight: 300;
   line-height: normal;
@@ -523,6 +541,7 @@ svg * {
 
 .checkbox {
   display: flex;
+  align-items: center;
   column-gap: 0.5em;
   user-select: none;
   height: 14px;
@@ -548,7 +567,7 @@ svg * {
 .checkbox-emulator::after {
   content: "𐄂";
   position: absolute;
-  top: -6px;
+  top: -10px;
   left: 2.5px;
   color: var(--color-yellow);
 }
@@ -569,6 +588,80 @@ svg * {
   position: relative;
   z-index: 200;
 }
+
+.full-diving {
+  width: 100%;
+  background-color: var(--color-yellow);
+  padding-top: var(--main-padding-block);
+  padding-bottom: 35px;
+  
+}
+
+.full-diving-content {
+  display: flex;
+  max-width: 952px;
+  justify-content: center;
+  margin-inline: auto;
+  column-gap: 32px;
+}
+
+.left-block {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly
+  
+}
+
+.hp-monitor {
+  justify-self: center;
+}
+
+.hp-cyberpunk {
+  display: inline-flex;
+  column-gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-block {
+  max-width: 460px;
+  flex-shrink: 0;
+}
+
+.full-diving-title {
+  font-size: 50px;
+  line-height: normal;
+  color: var(--color-dark);
+  font-family: var(--font-family-accent);
+  font-weight: 400;
+  margin-bottom: 39px;
+}
+
+.full-diving-description {
+  font-size: 18px;
+  margin-bottom: 31px;
+}
+
+.hp-advantages {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.more-link {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  padding-inline: 50px;
+  padding-block: 15px;
+  background-color: var(--color-dark);
+  color: var(--color-yellow);
+  text-decoration: none;
+  margin-top: 42px;
+}
+
+
 
 @media (max-width: 1028px) {
   .accessibility {
@@ -631,6 +724,18 @@ svg * {
     scale: 1.1;
     top: -7px;
   }
+
+  .full-diving-content {
+    flex-wrap: wrap;
+    row-gap: 40px;
+    justify-content: center;
+  }
+
+  .hp-monitor {
+    margin-bottom: 25px;
+  }
+
+  
 }
 
 @media (max-width: 767px) {
@@ -721,4 +826,51 @@ svg * {
   .play-and-win-text, .term, input::placeholder {
     font-size: 16px !important;
   }
+
+  .full-diving-content {
+    font-size: 16px;
+    padding-inline: 12px;
+  }
+
+  .left-block {
+    align-items: center;
+  }
+
+  .text-block {
+    width: 100%;
+  }
+
+  .hp-monitor {
+
+    width: 218px;
+    height: 150px;
+  }
+
+  .hp-logo {
+    flex-shrink: 1;
+    max-width: 32px;
+    aspect-ratio: 1;
+  }
+
+  .crossing-lines {
+    flex-shrink: 1;  
+    max-width: 37px;
+    max-height: 7px;
+  }
+
+  .cyberpunk-logo {
+    flex-shrink: 1;    
+    max-width: 129px;
+    max-height: 32px;
+  }
+
+  .full-diving-title {
+    font-size: 30px;
+  }
+
+  .more-link {
+    font-size: 16px;
+  }
+
+
 }
