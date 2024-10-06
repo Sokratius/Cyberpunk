@@ -622,9 +622,14 @@ svg * {
     margin-top: -150px;
   }
   
-
+  /*Reducing background animation*/
   .header {
     animation: none;
+  }
+
+  .checkbox-emulator::after {
+    scale: 1.1;
+    top: -7px;
   }
 }
 
