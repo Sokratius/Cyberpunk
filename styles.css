@@ -561,12 +561,13 @@ svg * {
   height: 16px;
   border: 1px solid var(--color-light);
   background-color: var(--color-dark);
-  
 }
 
 .checkbox-emulator::after {
   content: "";
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: var(--color-yellow);
@@ -661,6 +662,92 @@ svg * {
   margin-top: 42px;
 }
 
+.cyberpunk-buy-section {
+  display: flex;
+  column-gap: 32px;
+  font-size: 18px;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+.buy-image-container {
+  flex: 1;
+  max-width: 50%;
+  overflow: hidden;
+}
+
+.buy-image {
+  object-fit: cover;
+  height: 100%;
+}
+
+
+.cyberpunk-buy-text {
+  padding-block: var(--main-padding-block);
+  padding-right: 36px;
+  
+}
+
+.buy-title {
+  font-size: 50px;
+  font-family: var(--font-family-accent);
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 25px;
+}
+
+.choose-platform {
+  margin-top: 75px;
+}
+
+.platforms {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 319px;
+  margin-top: 20px;
+  column-gap: 64px;
+  row-gap: 38px;
+}
+
+.choose-platform-text,.buy-section-term {
+  font-size: 20px;
+}
+
+.politic {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-block: 12px;
+  column-gap: 32px;
+}
+
+.politic-links {
+  display: inline-flex;
+  column-gap: 32px;
+}
+
+.logos {
+  display: inline-flex;
+  column-gap: 32px;
+}
+
+.politic-link {
+  text-decoration: none;
+  color: var(--color-dark);
+}
+
+.footer-bottom {
+  background-color: var(--color-dark);
+  text-align: center;
+  padding-block: 2px;
+}
+
+.footer-copyright {
+  color: var(--color-light);
+  text-decoration: none;
+  font-size: 12px;
+}
 
 
 @media (max-width: 1028px) {
@@ -819,12 +906,21 @@ svg * {
     flex-direction: column;
   }
 
+  .play-and-win {
+    padding-inline: 12px;
+  }
+
   .play-and-win-title {
     font-size: 30px;
   }
 
   .play-and-win-text, .term, input::placeholder {
     font-size: 16px !important;
+  }
+
+  .checkbox-emulator::after {
+    top: 0;
+    left: 0;
   }
 
   .full-diving-content {
@@ -872,5 +968,47 @@ svg * {
     font-size: 16px;
   }
 
+  .cyberpunk-buy-section {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .buy-image-container {
+    display: none;
+    
+  }
+
+  .cyberpunk-buy-text {
+    padding-top: 40px;
+    padding-inline: 12px;
+    line-height: normal;
+  }
+
+  .complect-item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .buy-title {
+    font-size: 30px;
+  }
+  
+  .choose-platform-text,.buy-section-term {
+    font-size: 20px !important;
+  }
+
+  .footer-cypberpunk-logo {
+    width: 153px;
+    height: 39px;
+  }
+
+  .footer-cdproject-logo {
+    width: 89px;
+    height: 39px;
+  }
+
+  .politic-links {
+    font-size: 16px;
+  }
+
+  
 }
